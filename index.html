@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>tranquility</title>
+	<style type="text/css">
+
+
+ 	.MessageDisplay {
+ 		background-color: #483F47 ;
+ 		position: absolute; top: 0; left: 0; height: 100%; width: 100%;
+ 		display: inline-block;
+ 		
+ 
+  	}
+  	.messagescroll {
+
+  		overflow-y: scroll;
+  		display: inline-block;
+  		height: 94%; width: 81%;
+  		vertical-align: top;
+  		-ms-overflow-style: none;  /* IE and Edge */
+   		scrollbar-width: none;  /* Firefox */
+  	}
+  	.messagescroll::-webkit-scrollbar {
+  		 display: none;
+  	}
+  	.SideBar {
+
+  		width:12.5%; height: 100%; float: right;
+  		background-color: #342A39 ;
+  		display: inline-block;
+  	}
+  	.guildbar {
+  		width: 6%; height:100%; 
+  		background-color: #342A39;
+  		display: inline-block;
+  	}
+  	.messageinput {
+  		 margin-left: 6%;
+  		height:6%;
+  		width: 81.5%; position: absolute; bottom: 0px ; left: 0px; 
+  	}
+
+  	.msg {
+        position: relative;
+        color: black;
+        padding-top: 32px;
+        margin: 10px 0;
+        border: 2px solid #dedede;
+        background-color: #f1f1f1;
+        border-radius: 5px;
+      }
+  	.input {
+  		
+  		
+  		background-color: #5f4860;
+  		width: 100%; height: 100%;
+  	}
+
+  	.user {
+  		width: 100%; height:2.5%;
+  		object-fit: fill;
+  	}
+
+
+	</style>
+	
+</head>
+<body>
+<script >
+	
+	var messageinput;
+	var ident = 0 ;
+	var pfp 
+	
+
+
+	function CreateMsg() {														// function that creates messages and adds ids
+		console.log("create msg called");
+		var MsgDisplay = document.createElement("div");  
+		var messageinput = document.getElementById("messageinput").value ; 
+
+		MsgDisplay.innerHTML = messageinput;									// sets the text to the user input 
+		MsgDisplay.classList.add("msg");
+
+
+		MsgDisplay.setAttribute("id", "msg" + ident++);           // place holder id backend team replace
+		document.getElementById("messagescroll").appendChild(MsgDisplay);  // message div in to container div
+
+	}
+
+ function onKeyPressed(event) {
+  var keyCode = event.which || event.keyCode;
+
+		console.log("keypressed called");
+		
+		
+
+		console.log({ keyCode });
+		if (keyCode == 13) {
+
+			CreateMsg();
+			 }
+
+		else {
+			console.log("not enter"); }
+	}
+ </script>
+ 	<div id="test">
+	<div id="MessageDisplay" class="MessageDisplay"> 
+		<div class="guildbar">
+			
+			<div>
+				<a href="server1.html"> server1 </a>
+			</div>
+
+		</div>
+		<div id="messagescroll" class="messagescroll"></div>
+		<div class="SideBar">
+
+			<div class="user">  mommymilkers  </div>
+		 </div>
+		
+		<div class="messageinput"> <input class="input" onkeypress="onKeyPressed(event)" id="messageinput" type="text" name="message-input"> 
+
+		 </div>
+		</div>
+</div>
+ 
+</body>
+</html>
