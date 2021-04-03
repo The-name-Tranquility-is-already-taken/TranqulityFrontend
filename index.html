@@ -58,11 +58,13 @@
 
   	.user {
   		width: 100%; height:2.5%;
-  		
+  		display: inline-block;
+
   	}
  	.pfp {
  		height: 40px; width: 40px;
  		border-radius: 50%;
+ 		display: inline-block;
  	}
 
 	.GuildBubble {
@@ -73,10 +75,10 @@
 		margin-top: 13px;
 	}
 
-.GuildBubble_ContentRegion_Testing {
+	.GuildBubble_ContentRegion_Testing {
 	padding-left: 5px;
 	padding-top: 12px;	
-}
+	}
 	</style>
 	
 </head>
@@ -282,7 +284,7 @@
 
 		<div class="SideBar">
 
-			<div class="user"> <img class="pfp" src="pfp.png">  mommymilkers  </div>
+			<div class="user"> <img class="pfp" src="pfp.png"> <div style="text-align: center" class="txt-align"> mommymilkers </div>  </div>
 		 </div>
 		
 		<div class="messageinput"> <input class="input" onkeypress="onKeyPressed(event)" id="messageinput" type="text" name="message-input"> 
