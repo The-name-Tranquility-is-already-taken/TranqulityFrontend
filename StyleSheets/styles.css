@@ -42,10 +42,12 @@
     display: inline-block;
 }
 .channel {
-
+height: 99%;
+width: 3%;
+display: inline-block;
 }
 .messageinput {
-      margin-left: 3.5%;
+      margin-left: 10.5%;
      height:6%;
      width: 84%; position: absolute; bottom: 0px ; left: 0px;
 
@@ -77,7 +79,6 @@
 .user:hover {
     background-color: #483F47;
 }
-
 
 .messagePfp {
     height: 40px;
