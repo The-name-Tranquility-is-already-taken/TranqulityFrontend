@@ -34,7 +34,7 @@ function log(message, type = "DEBUG") {
         }
         return tmp;
     }
-    console.log(StartMessage + balence(StartMessage) +  "-> " + message);
+    console.log(StartMessage + balence() +  "-> " + message);
 }
 function char_count(str, letter)  {
     var letter_Count = 0;
