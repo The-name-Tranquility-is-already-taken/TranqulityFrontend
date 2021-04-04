@@ -19,7 +19,7 @@ function addGuildToCache(id_t, name_T, description_T) {
         fetchedMembers: false,
         channels: 	[ ],
         members: 	[ ]
-    }
+    };
     localCache.guilds.push(obj);
 }
 
