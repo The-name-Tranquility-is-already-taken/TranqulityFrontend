@@ -3,19 +3,14 @@
     Github:
 
 */
-maxSize = 25
+maxSize = 25;
 logLevel = "ALL";
 function getLogLevelNum(level) {
-  if (level == "TESTING")
-    return 0;
-  if (level == "GENERIC")
-    return 1;
-  if (level == "ERROR")
-    return 2;
-  if (level == "DEBUG")
-    return 3;
-  if (level == "ALL")
-    return 4;
+  if (level == "TESTING") return 0;
+  if (level == "GENERIC") return 1;
+  if (level == "ERROR") return 2;
+  if (level == "DEBUG") return 3;
+  if (level == "ALL") return 4;
   log("Unsure what log level " + level + " belongs to.", "GENERIC");
   return 4;
 }
@@ -26,7 +21,7 @@ function log(message, type = "DEBUG") {
 
   time = getDateTime();
 
-  StartMessage = (`[${time}] - [` + type + `] `);
+  StartMessage = `[${time}] - [` + type + `] `;
 
   left = maxSize - StartMessage.length;
   function balence() {
@@ -50,7 +45,6 @@ function char_count(str, letter) {
   return letter_Count;
 }
 function getDateTime() {
-
   var date = new Date();
 
   var hour = date.getHours();
@@ -71,7 +65,7 @@ function getDateTime() {
   day = (day < 10 ? "0" : "") + day;
 
   var output =
-      year + ":" + month + ":" + day + " - " + hour + ":" + min + ":" + sec;
+    year + ":" + month + ":" + day + " - " + hour + ":" + min + ":" + sec;
   return output;
 }
-log("Loaded. logging_html.js")
+log("Loaded. logging_html.js");

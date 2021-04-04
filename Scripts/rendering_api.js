@@ -1,8 +1,8 @@
 // Displays Guild on screen.
-function displayGuild_Localy(id_t,
-                             name_t) { // function that creates new messages
+function displayGuild_Localy(id_t, name_t) {
+  // function that creates new messages
   var bubbleObject = document.createElement("div");
-  bubbleObject.classList.add("GuildBubble");  // Append ID For css
+  bubbleObject.classList.add("GuildBubble"); // Append ID For css
   bubbleObject.setAttribute("guildID", id_t); // Append ID For css
   bubbleObject.setAttribute("onclick", `selectGuild(${id_t})`);
 
@@ -18,22 +18,22 @@ function displayGuild_Localy(id_t,
 }
 
 // Displays Message on screen within the message scroll div
-function displayMessage_Localy(content) { // function that creates new messages
-  var currentMessageID = ident++;         // Increase message id - TESTING ONLY
+function displayMessage_Localy(content) {
+  // function that creates new messages
+  var currentMessageID = ident++; // Increase message id - TESTING ONLY
 
   var messageObject = document.createElement("div");
   messageObject.classList.add("msg"); // ID For css
-  messageObject.setAttribute(
-      "id", "msg" + currentMessageID); // place holder id backend team replace
+  messageObject.setAttribute("id", "msg" + currentMessageID); // place holder id backend team replace
 
   var profilePicObject = createPfpObject();
 
-  document.getElementById("messageContentRegion")
-      .appendChild(messageObject); // message div in to container div
+  document.getElementById("messageContentRegion").appendChild(messageObject); // message div in to container div
 
   // Add profile pic to message object
-  document.getElementById("msg" + currentMessageID /* TESTING ONLY */)
-      .appendChild(profilePicObject); // message div in to container div
+  document
+    .getElementById("msg" + currentMessageID /* TESTING ONLY */)
+    .appendChild(profilePicObject); // message div in to container div
 
   // Set the text for the message
   var textObject = document.createElement("div");
@@ -41,14 +41,14 @@ function displayMessage_Localy(content) { // function that creates new messages
 
   textObject.innerHTML = content;
 
-  document.getElementById("msg" + currentMessageID /* TESTING ONLY */)
-      .appendChild(textObject);
+  document
+    .getElementById("msg" + currentMessageID /* TESTING ONLY */)
+    .appendChild(textObject);
 }
 
 // Clear the displayed messages.
 function clear_messages(log_t = true) {
-  if (log_t)
-    log("Clearing all displayed messages", "DEBUG");
+  if (log_t) log("Clearing all displayed messages", "DEBUG");
 
   // Clear rendered messages.
   document.getElementById("messageContentRegion").innerHTML = "";
@@ -56,8 +56,7 @@ function clear_messages(log_t = true) {
 
 // Clear the displayed messages.
 function clear_guildMenu(log_t = true) {
-  if (log_t)
-    log("Clearing all displayed guilds", "DEBUG");
+  if (log_t) log("Clearing all displayed guilds", "DEBUG");
 
   // Clear rendered messages.
   document.getElementById("guildSideBar").innerHTML = "";
@@ -65,8 +64,7 @@ function clear_guildMenu(log_t = true) {
 
 // Clear the displayed messages.
 function clear_channels(log_t = true) {
-  if (log_t)
-    log("Clearing all displayed channels", "DEBUG");
+  if (log_t) log("Clearing all displayed channels", "DEBUG");
 
   log("TODO: Implement channel clearing.", "DEBUG");
   // Clear rendered messages.
@@ -82,4 +80,4 @@ function clear_screen() {
   clear_channels(false);
 }
 
-log("Loaded. rendering_api.js")
+log("Loaded. rendering_api.js");

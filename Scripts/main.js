@@ -1,14 +1,16 @@
 // Created a pfp object to be used
-function createPfpObject(type = "MESSAGE", userID = undefined,
-                         UserName = undefined) {
+function createPfpObject(
+  type = "MESSAGE",
+  userID = undefined,
+  UserName = undefined
+) {
   var profilePicObject = document.createElement("img");
   if (type == "MESSAGE") {
     profilePicObject.classList.add("messagePfp"); // ID For css
   } else if (type == "GUILD") {
     profilePicObject.classList.add("guildPfp"); // ID For css
   }
-  profilePicObject.setAttribute(
-      "src", "../../Assets/pfp.png"); // place holder id backend team replace
+  profilePicObject.setAttribute("src", "../../Assets/pfp.png"); // place holder id backend team replace
   return profilePicObject;
 }
 //#region pfp wrappers
@@ -28,7 +30,7 @@ function test() {
 
   var localUserState = localCache.localData;
 
-  localCache = {localUserState, guilds : []};
+  localCache = { localUserState, guilds: [] };
 
   clear_screen();
 
@@ -42,4 +44,4 @@ function test() {
 
   renderGuildsBar();
 }
-log("Loaded. main.js")
+log("Loaded. main.js");

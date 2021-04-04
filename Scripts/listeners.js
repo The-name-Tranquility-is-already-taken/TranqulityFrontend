@@ -3,7 +3,8 @@ function onKeyPressed(event) {
   var keyCode = event.which || event.keyCode;
   console.log(`keypressed called - ${keyCode}`);
 
-  if (keyCode == 13) { // Enter Key
+  if (keyCode == 13) {
+    // Enter Key
     if (document.getElementById("messageinput").value != "") {
       displayMessage_Localy(document.getElementById("messageinput").value);
     }
@@ -15,7 +16,9 @@ function onKeyPressed(event) {
 }
 
 // Unused currently mainly for reference
-function Changewindow() { window.location.href = "guild.html"; }
+function Changewindow() {
+  window.location.href = "guild.html";
+}
 
 // Used by guild bubbles
 function selectGuild(id_t) {
@@ -24,4 +27,4 @@ function selectGuild(id_t) {
 
   clear_messages();
 }
-log("Loaded. listeners.js")
+log("Loaded. listeners.js");
