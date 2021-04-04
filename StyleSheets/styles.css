@@ -79,7 +79,20 @@
 }
 
 
-.pfp {
+.messagePfp {
+    height: 40px; 
+    width: 40px;
+
+    border-radius: 50%;
+    display: inline-block;
+}
+.guildPfp {
+    height: 51px;
+    width: 51px;
+    border-radius: 50%;
+    display: block;
+}
+.userPfp {
     height: 40px; 
     width: 40px;
 

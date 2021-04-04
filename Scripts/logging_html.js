@@ -3,9 +3,7 @@
     Github: 
 
 */
-
-const colors = require('colors');
-
+maxSize = 25
 logLevel = "ALL";
 function getLogLevelNum(level) {
     if(level == "TESTING")  return 0;
@@ -13,31 +11,18 @@ function getLogLevelNum(level) {
     if(level == "ERROR")    return 2;
     if(level == "DEBUG")    return 3;
     if(level == "ALL")      return 4;
-    log("Unsure what log level " + level.red + " belongs to.", "GENERIC");
+    log("Unsure what log level " + level + " belongs to.", "GENERIC");
     return 4;
 
 }
-exports.getLogLevelNum = (level) => {
-    return getLogLevelNum(level);
-}
 function log(message, type = "DEBUG") {
-    if(getLogLevelNum(type) > getLogLevelNum(logLevel))
-    {
-        // console.log("Log level: " + getLogLevelNum(type));
-        // console.log("Config log level: " + getLogLevelNum(logLevel));
+    if(getLogLevelNum(type) > getLogLevelNum(logLevel)) {
         return;
     }
 
-    maxSize = 55
+    time = getDateTime();
 
-    time = getDateTime().yellow;
-
-    StartMessage = "";
-    if(type == "ERROR") StartMessage = (`[${time}] - [` + type.red + `]`);
-    else if(type == "GENERIC") StartMessage = (`[${time}] - [` + type.green + `]`);
-    else if(type == "DEBUG") StartMessage = (`[${time}] - [` + type.gray + `]`);
-    else if(type == "TESTING") StartMessage = (`[${time}] - [` + type.magenta + `]`);
-    else StartMessage = (`[${time}] - [` + type.gray + `]`);
+    StartMessage = (`[${time}] - [` + type + `] `);
 
     left = maxSize - StartMessage.length;
     function balence() {
@@ -51,9 +36,6 @@ function log(message, type = "DEBUG") {
     }
     console.log(StartMessage + balence(StartMessage) +  "-> " + message);
 }
-exports.log = (message, type = "DEBUG") => {
-    return log(message, type);
-}
 function char_count(str, letter)  {
     var letter_Count = 0;
     for (var position = 0; position < str.length; position++) {
@@ -62,9 +44,6 @@ function char_count(str, letter)  {
         }
     }
     return letter_Count;
-}
-exports.char_count = (str, letter) => {
-    return char_count(str, letter);
 }
 function getDateTime() {
 
@@ -87,8 +66,7 @@ function getDateTime() {
     var day  = date.getDate();
     day = (day < 10 ? "0" : "") + day;
 
-    return (year + ":" + month + ":" + day + " - " + hour + ":" + min + ":" + sec);
+    var output = year + ":" + month + ":" + day + " - " + hour + ":" + min + ":" + sec;
+    return output;
 }
-exports.getDateTime = () => {
-    return getDateTime();
-}
+log("Loaded. logging_html.js")
