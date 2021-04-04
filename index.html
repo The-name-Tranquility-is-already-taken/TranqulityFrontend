@@ -2,99 +2,14 @@
 <html>
 <head>
 	<title>tranquility</title>
-	<style type="text/css">
-
-
- 	.MessageDisplay {
- 		background-color: #483F47 ;
- 		position: absolute; top: 0; left: 0; height: 100%; width: 100%;
- 		display: inline-block;
- 		
- 
-  	}
-  	.messagescroll {
-
-  		overflow-y: scroll;
-  		display: inline-block;
-  		height: 94%; width: 81%;
-  		vertical-align: top;
-  		-ms-overflow-style: none;  /* IE and Edge */
-   		scrollbar-width: none;  /* Firefox */
-  	}
-  	.messagescroll::-webkit-scrollbar {
-  		 display: none;
-  	}
-  	.SideBar {
-
-  		width:12.5%; height: 100%; float: right;
-  		background-color: #342A39 ;
-  		display: inline-block;
-  	}
-  	.guildSideBar {
-  		width: 6%; height:100%; 
-  		background-color: #342A39;
-  		display: inline-block;
-  	}
-  	.messageinput {
-  		 margin-left: 6%;
-  		height:6%;
-  		width: 81.5%; position: absolute; bottom: 0px ; left: 0px; 
-  	}
-
-  	.msg {
-        position: relative;
-        color: black;
-        padding-top: 2px;
-		padding-bottom: 2px;
-        margin: 10px 0;
-        border: 2px solid #dedede;
-        background-color: #f1f1f1;
-        border-radius: 5px;
-      }
-  	.input {
-  		background-color: #5f4860;
-  		width: 100%; height: 100%;
-  	}
-
-  	.user {
-  		width: 100%; height:5%;
-  		display: inline-block;
-  		transition: 0.2s;
-
-  	}
-  	.user:hover {
-  		background-color: #483F47;
-  	}
- 	.pfp {
- 		height: 40px; width: 40px;
- 		border-radius: 50%;
- 		display: inline-block;
- 	}
-
-	.GuildBubble {
-		height: 50px; width: 50px;
- 		border-radius: 50%;       
-	 	border: 2px solid blue;
-	
-		margin-top: 13px;
-	}
-
-	.GuildBubble_ContentRegion_Testing {
-	padding-left: 5px;
-	padding-top: 12px;	
-	}
-	.txt-align {
-
-		margin-top: -10.5%;
-
-	}
-	</style>
-	
+	<link rel="stylesheet" href="styles.css">	
 </head>
 <body>
 <script >
 	const delay = ms => new Promise(res => setTimeout(res, ms));
 	
+	var selectedGuild = 1;
+
 	var localCache = {
 		localData: {
 			id: 123,
@@ -175,8 +90,9 @@
 		document.getElementById("msg" + currentMessageID /* TESTING ONLY */ )
 			.appendChild(textObject);
 	}
-		// Created a pfp object to be used
-		function createPfpObject(userID = undefined, UserName = undefined)
+	
+	// Created a pfp object to be used
+	function createPfpObject(userID = undefined, UserName = undefined)
 	{
 		var profilePicObject 	= document.createElement("img");  
 		profilePicObject.classList.add("pfp");	// ID For css
@@ -189,7 +105,7 @@
 		var bubbleObject 		= document.createElement("div");  
 		bubbleObject.classList.add("GuildBubble");	// Append ID For css
 		bubbleObject.setAttribute("guildID", id_t);	// Append ID For css
-		bubbleObject.setAttribute("onclick" "Changewindow()");
+		bubbleObject.setAttribute("onclick", `selectGuild(${id_t})`);
 
 		/* Testing */
 		var GuildBubble_ContentRegion_Testing = document.createElement("div"); 
@@ -235,10 +151,7 @@
 
 	function partiallyReloadClient() {
 		console.log(`Partially reloading client!`);
-		while(document.getElementById("messagescroll") == null) {
-			console.log(`Waiting for page to load.`);
-			
-		}
+
 		var localUserState = localCache.localData; 
 		
 		localCache = { 
@@ -273,10 +186,14 @@
 		}
 	}
 
-	delay(1000);
-	//partiallyReloadClient();
 	function Changewindow() {
-		window.location.href = "guild.html"; }
+		window.location.href = "guild.html";
+	}
+
+	function selectGuild(id_t) {
+		selectedGuild = id_t;
+		console.log(`Selecting guild: ${id_t}`);
+	}
 </script>
  	<div id="test">
 	<div id="MessageDisplay" class="MessageDisplay"> 
@@ -287,7 +204,7 @@
 
 				<div class="GuildBubble_ContentRegion_Testing">
 
-					<a href="server1.html"> server1 </a>
+					<a href=" "> server1 </a>
 				</div>
 			</div>
 		</div>

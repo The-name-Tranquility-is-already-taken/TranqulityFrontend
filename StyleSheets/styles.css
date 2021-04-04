@@ -1,0 +1,98 @@
+.MessageDisplay {
+    background-color: #483F47 ;
+    position: absolute; top: 0; left: 0; height: 100%; width: 100%;
+    display: inline-block;
+}
+
+.messagescroll {
+    height: 94%; 
+    width: 81%;
+ 
+    overflow-y: scroll;
+    display: inline-block;
+    vertical-align: top;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+.messagescroll::-webkit-scrollbar {
+    display: none;
+}
+
+.SideBar {
+    width:12.5%; 
+    height: 100%; 
+    float: right;
+
+    background-color: #342A39 ;
+    display: inline-block;
+}
+
+.guildSideBar {
+    width: 6%; 
+    height:100%; 
+
+    background-color: #342A39;
+    display: inline-block;
+}
+.messageinput {
+      margin-left: 6%;
+     height:6%;
+     width: 81.5%; position: absolute; bottom: 0px ; left: 0px; 
+}
+
+.msg {
+   position: relative;
+   color: black;
+   padding-top: 2px;
+   padding-bottom: 2px;
+   margin: 10px 0;
+   border: 2px solid #dedede;
+   background-color: #f1f1f1;
+   border-radius: 5px;
+}
+ .input {
+     background-color: #5f4860;
+     width: 100%; height: 100%;
+}
+
+
+.user {
+    width: 100%; 
+    height:5%;
+
+    display: inline-block;
+    transition: 0.2s;
+}
+.user:hover {
+    background-color: #483F47;
+}
+
+
+.pfp {
+    height: 40px; 
+    width: 40px;
+
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.GuildBubble {
+    height: 50px; 
+    width: 50px;
+    
+    border-radius: 50%;       
+    border: 2px solid blue;
+
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.GuildBubble_ContentRegion_Testing {
+    padding-left: 5px;
+    padding-top: 12px;	
+}
+
+.txt-align {
+   margin-top: -10.5%;
+}
