@@ -1,37 +1,43 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title>tranquility</title>
-	<link rel="stylesheet" href="./StyleSheets/styles.css">
-	<script src="./Scripts/main.js"></script> 	
-</head>
-<body>
- 	<div id="test">
-	<div id="MessageDisplay" class="MessageDisplay"> 
+	<head>
+		<title>Tranquility </title>
+		<link rel="stylesheet" href="./StyleSheets/styles.css">
+		<script src="./Scripts/main.js"></script> 	
+	</head>
+	
+	<body>
+		<div id="test">
+			<div id="MessageDisplay" class="MessageDisplay"> 
 
-		<div id="guildSideBar" class="guildSideBar">
+				<!-- Guild sidebar region -->
+				<div id="guildSideBar" class="guildSideBar">
 
-			<div class="GuildBubble">
+					<!-- 
+					<div class="GuildBubble">
+						<div class="GuildBubble_ContentRegion_Testing">
+							<a href=" "> server1 </a>
+						</div>
+					</div> 
+					-->
+				</div> 
 
-				<div class="GuildBubble_ContentRegion_Testing">
+				<!-- Messages content region -->
+				<div id="messagescroll" class="messagescroll">
 
-					<a href=" "> server1 </a>
+				</div>
+
+				<!-- Users sidebar list -->
+				<div class="SideBar">
+
+					<!-- <div class="user"> <img class="pfp" src="pfp.png"> <div style="text-align: center" class="txt-align"> mommymilkers </div>  </div> -->
+				</div>
+
+				<!-- Message input box -->
+				<div class="messageinput"> 
+					<input class="input" on onkeypress="onKeyPressed(event)" id="messageinput" type="text" name="message-input"> 
 				</div>
 			</div>
 		</div>
-
-		<div id="messagescroll" class="messagescroll"></div>
-
-		<div class="SideBar">
-
-			<div class="user"> <img class="pfp" src="pfp.png"> <div style="text-align: center" class="txt-align"> mommymilkers </div>  </div>
-		 </div>
-		
-		<div class="messageinput"> <input class="input" on onkeypress="onKeyPressed(event)" id="messageinput" type="text" name="message-input"> 
-
-		 </div>
-		</div>
-</div>
- 
-</body>
+	</body>
 </html>
