@@ -4,7 +4,7 @@
     display: inline-block;
 }
 
-.messagescroll {
+.messageContentRegion {
     height: 94%; 
     width: 81%;
  
@@ -15,11 +15,11 @@
     scrollbar-width: none;  /* Firefox */
 }
 
-.messagescroll::-webkit-scrollbar {
+.messageContentRegion::-webkit-scrollbar {
     display: none;
 }
 
-.SideBar {
+.UsersSideBar {
     width:12.5%; 
     height: 100%; 
     float: right;
