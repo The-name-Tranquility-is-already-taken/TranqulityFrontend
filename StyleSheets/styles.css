@@ -34,17 +34,26 @@
 
     background-color: #342A39;
     display: inline-block;
+    float: left;
 }
 .GuildPopout {
     width: 6%;
     height:100%;
     background-color: #413548;
     display: inline-block;
+    float: left;
 }
+
 .channel {
+<<<<<<< Updated upstream
 height: 99%;
 width: 3%;
 display: inline-block;
+=======
+
+ width: 99%;
+ height: 5%;
+>>>>>>> Stashed changes
 }
 .messageinput {
       margin-left: 10.5%;
