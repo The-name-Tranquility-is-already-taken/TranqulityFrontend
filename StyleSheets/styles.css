@@ -35,30 +35,32 @@
     background-color: #342A39;
     display: inline-block;
     float: left;
+
 }
 .GuildPopout {
-    width: 6%;
+    width: 7.5%;
     height:100%;
+
     background-color: #413548;
     display: inline-block;
     float: left;
 }
 
 .channel {
-<<<<<<< Updated upstream
-height: 99%;
-width: 3%;
-display: inline-block;
-=======
+width: 96%;
+height: 3%;
 
- width: 99%;
- height: 5%;
->>>>>>> Stashed changes
+transition: 0.05s;
+padding: 5%;
 }
+.channel:hover {
+  background-color: #483F47;
+}
+
 .messageinput {
-      margin-left: 10.5%;
+      margin-left: 11%;
      height:6%;
-     width: 84%; position: absolute; bottom: 0px ; left: 0px;
+     width: 76.5%; position: absolute; bottom: 0px ; left: 0px;
 
 }
 
