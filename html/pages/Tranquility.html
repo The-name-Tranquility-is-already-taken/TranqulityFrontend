@@ -1,0 +1,77 @@
+<html><head>
+		<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+		<meta content="utf-8" http-equiv="encoding">
+		<title>Tranquility</title>
+
+
+		<link rel="stylesheet" href="Tranquility_files/styles.css">
+		<!-- Load in the global varibles -->
+		<script src="Tranquility_files/publicVaribles.js"></script>
+
+		<!-- Load cache managment module -->
+		<script src="Tranquility_files/cacheManagment.js"></script>
+
+		<!-- Load logging module -->
+		<script src="Tranquility_files/logging_html.js"></script>
+
+		<!-- Load listeners -->
+		<script src="Tranquility_files/listeners.js"></script>
+
+		<!-- Load rendering controllers  -->
+		<script src="Tranquility_files/rendering_api.js"></script>
+		<script src="Tranquility_files/rendering_controller.js"></script>
+
+		<!-- Load main script -->
+		<script src="Tranquility_files/main.js"></script>
+	</head>
+
+	<body>
+			<div id="MessageDisplay" class="MessageDisplay">
+
+				<!-- Guild sidebar region -->
+				<div id="guildSideBar" class="guildSideBar">
+					<div class="GuildBubble" guildid="1" onclick="selectGuild(1)">
+						<div>
+							<img class="guildPfp" src="Tranquility_files/pfp.png">
+						</div>
+
+					</div>
+					<div class="GuildBubble" guildid="2" onclick="selectGuild(2)">
+						<div>
+							<img class="guildPfp" src="Tranquility_files/pfp.png">
+						</div>
+					</div>
+				</div>
+
+				<div class="GuildPopout">
+					<div class="channel">
+						general 1
+					</div>
+					<div class="channel">
+						general 2
+					</div>
+					<div class="channel">
+					nsfw
+					</div>
+
+				</div>
+
+				<!-- Messages content region -->
+				<div id="messageContentRegion" class="messageContentRegion">
+
+				</div>
+
+				<!-- Users sidebar list -->
+				<div id="UsersSideBar" class="UsersSideBar">
+
+ <div class="user"> <img class="userPfp" src="Tranquility_files/a.jpeg"> <div style="text-align: center" class="txt-align"> mommymilkers </div>  </div>
+				</div>
+
+				<!-- Message input box -->
+				<div class="messageinput">
+					<input class="input" on="" onkeypress="onKeyPressed(event)" id="messageinput" type="text" name="message-input">
+				</div>
+			</div>
+	
+
+</body></html>
