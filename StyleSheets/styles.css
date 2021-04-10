@@ -131,3 +131,36 @@ padding: 5%;
 .txt-align {
    margin-top: -10.5%;
 }
+
+
+
+.setscroll {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+  background-color: #903749;
+  width: 10%; height: 100%;
+}
+.setscroll::-webkit-scrollbar {
+  display: none; /* crome   */
+}
+html {
+   margin: 0px;
+   height: 100%;
+   width: 100%;
+}
+
+body {
+  background-color: #2b2e4a;
+   margin: 0px;
+   min-height: 100%;
+   width: 100%;
+}
+.setopt {
+  width: 95%;
+  height: 5%;
+  padding: 5%;
+
+}
+.setopt:hover {
+  background-color: #e84545;
+}
